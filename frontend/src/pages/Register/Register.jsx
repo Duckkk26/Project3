@@ -5,7 +5,7 @@ import { Button, Col, Container, FormGroup, FormText, Input, Row } from 'reactst
 import Widget from '../../components/Widget/Widget'
 
 // Import Icons
-import sapoLogo from '../../assets/logo-sapo.webp'
+import logo from '../../assets/logo.png'
 import registerImage from '../../assets/register-image.svg'
 import GoogleIcon from '../../assets/icons/GoogleIcon'
 import TwitterIcon from '../../assets/icons/TwitterIcon'
@@ -64,7 +64,7 @@ const Register = () => {
                         <div className="d-flex align-items-center justify-content-between py-3">
                             <p className="auth-header mb-0">Đăng ký</p>
                             <div className="logo-block">
-                                <img src={sapoLogo} alt="" />
+                                <img src={logo} alt="" />
                             </div>
                         </div>
                         <form onSubmit={(e) => doRegister(e)}>

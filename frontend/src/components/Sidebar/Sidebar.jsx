@@ -7,7 +7,7 @@ import MenuListItem from '../MenuListItem/MenuListItem'
 import s from './Sidebar.module.scss'
 
 // Import icons
-import logoSapo from '../../assets/logo-sapo.webp'
+import logo from '../../assets/logo.png'
 import homeIcon from '../../assets/icons/HomeIcon.jsx'
 import productIcon from '../../assets/icons/ProductIcon.jsx'
 import reportIcon from '../../assets/icons/ReportIcon.jsx'
@@ -26,7 +26,7 @@ const Sidebar = () => {
         <header className={s.header}>
           <div className={s.logo}>
             <Link to='/admin'>
-              <img src={logoSapo} width={130} />
+              <img src={logo} width={130} />
             </Link>
           </div>
         </header>

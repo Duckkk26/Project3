@@ -49,7 +49,7 @@ public class MailService {
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
-        helper.setFrom(emailFrom, "SAPO Mock Project");
+        helper.setFrom(emailFrom, "Project III");
 
         if (recipients.contains(",")) { // send to multiple users
             helper.setTo(InternetAddress.parse(recipients));
@@ -95,7 +95,7 @@ public class MailService {
         properties.put("linkConfirm", linkConfirm);
         context.setVariables(properties);
 
-        helper.setFrom(emailFrom, "SAPO Mock Project");
+        helper.setFrom(emailFrom, "Project III");
         helper.setTo(emailTo);
         helper.setSubject("Xác nhận tài khoản");
         String html = templateEngine.process("confirm-email.html", context);
