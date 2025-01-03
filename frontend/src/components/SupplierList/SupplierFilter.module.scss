@@ -1,0 +1,76 @@
+.box-search {
+    position: relative;
+    /* Quan trọng để giữ search results dưới ô input */
+    width: 100%;
+    max-width: 400px;
+    /* Tùy chỉnh chiều rộng */
+}
+
+.box-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-icon {
+    margin-right: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-results {
+    position: absolute;
+    /* Để danh sách nằm ngay dưới ô input */
+    top: 100%;
+    /* Hiển thị ngay dưới ô input */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    /* Loại bỏ viền trên để kết nối với ô input */
+    max-height: 300px;
+    /* Giới hạn chiều cao và cho phép cuộn */
+    overflow-y: auto;
+    z-index: 10;
+    /* Đảm bảo kết quả nằm trên các phần tử khác */
+    border-radius: 0 0 5px 5px;
+    /* Làm góc tròn phía dưới */
+}
+
+.search-result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.no-results,
+.loading-text {
+    padding: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Xử lý khi không có kết quả */
+.no-results {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+}

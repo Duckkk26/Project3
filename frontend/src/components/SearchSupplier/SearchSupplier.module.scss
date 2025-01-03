@@ -1,0 +1,28 @@
+@import "../../styles/helpers";
+
+.container {
+    width: 100%;
+
+    .boxEmpty {
+        background-color: #fff;
+        margin-top: 40px;
+        text-align: center;
+
+        > svg {
+            color: #E8EAEB;
+            width: 40px;
+            height: 40px;
+        }
+
+        > p {
+            box-sizing: border-box;
+            font-family: $font-family-base;
+            font-weight: $font-weight-base;
+            font-size: $font-size-base;
+            line-height: 20px;
+            margin: 0;
+            color: #A3A8AF;
+            text-align: inherit;
+        }
+    }
+}

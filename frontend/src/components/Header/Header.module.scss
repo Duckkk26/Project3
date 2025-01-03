@@ -1,0 +1,128 @@
+@import '../../styles/helpers';
+
+.container {
+    top: 0 !important;
+    height: 52px !important;
+    display: flex !important;
+    padding: 0 32px !important;
+    z-index: 1001 !important;
+    position: sticky !important;
+    background: #fff !important;
+    box-shadow: 0px 2px 4px rgba(168, 168, 168, 0.25) !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    h3 {
+        font-size: 1.7rem;
+        font-family: var(--bs-font-sans-serif);
+        font-weight: $font-weight-semibold;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    :global {
+        .input-group {
+            overflow: hidden;
+        }
+
+        .input-group-prepend {
+            background-color: $white;
+            transition: background-color ease-in-out 0.15s;
+            padding-right: 1rem;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-control {
+            background-color: $white;
+            height: 45px;
+            border: none;
+            border-radius: .5rem;
+            padding-left: 1rem;
+            font-size: $font-size-base;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.navbarBlock {
+    display: flex;
+    color: $icon-color;
+
+    svg {
+        font-size: 24px;
+    }
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: rgb(215, 61, 50);
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.fullName {
+    margin: 0 10px;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+    font-family: var(--bs-font-sans-serif);
+    line-height: 20px;
+}
+
+.menuIcon {
+    fill: $icon-color;
+}
+
+.notificationImage {
+    margin: 8px auto 12px;
+    width: 100%;
+}
+
+.count {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 3px;
+    right: 1px;
+    background: $pink;
+    border-radius: 50%;
+}
+
+.form-control::placeholder {
+    color: red;
+    opacity: 1;
+}
+
+.dropdownProfileItem {
+    display: flex;
+
+    &:hover {
+        svg {
+            path {
+                fill: $default;
+                stroke: $default;
+            }
+        }
+    }
+}

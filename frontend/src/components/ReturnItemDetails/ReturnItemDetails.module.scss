@@ -1,0 +1,142 @@
+@import "../../styles/helpers";
+
+.container {
+    color: $default;
+    background-color: #f6f3ff;
+    border-bottom: 1px solid rgb(232, 234, 235);
+}
+
+.wrapper {
+    padding: 16px;
+}
+
+.gridContainer {
+    -webkit-box-flex: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 16px);
+    margin-left: -16px;
+    margin-top: -16px;
+        
+    .gridItem {
+        padding-left: 16px;
+        padding-top: 16px;
+    }
+}
+
+.boxInfo {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    max-width: calc(83.3333%);
+    flex-basis: calc(83.3333%);
+}
+
+.boxBtn {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    max-width: calc(16.6667%);
+    flex-basis: calc(16.6667%);
+
+    .btn {
+        width: 100%;
+        background-color: #fff;
+    }
+}
+
+.boxProducts {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+
+.boxContent {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+}
+
+.p16 {
+    padding: 16px !important;
+}
+
+.groupInfo {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+}
+
+.boxSupplier {
+    width: 300px;
+}
+
+.boxReason {
+    width: calc(100% - 750px);
+    padding-right: 8px;
+}
+
+.boxTransaction {
+    width: 450px;
+    border-left: 1px solid #E8EAEB;
+    padding-left: 16px;
+}
+
+.title {
+    box-sizing: border-box;
+    font-family: $font-family-base;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base !important;
+    line-height: 20px;
+    margin: 0px;
+    color: rgb(15, 24, 36);
+    text-align: inherit;
+}
+
+.content {
+    box-sizing: border-box;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 20px;
+    margin-top: 8px;
+    color: $default;
+    text-align: inherit;
+}
+
+.textItem {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+
+    > p {
+        box-sizing: border-box;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin-right: 4px;
+        color: rgb(116, 124, 135);
+        text-align: inherit;
+        width: 100px;
+    }
+
+    > a {
+        text-decoration: none;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin: 0px;
+        cursor: pointer;
+        color: $violet;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

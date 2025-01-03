@@ -1,0 +1,344 @@
+@import '../../../styles/helpers.scss';
+
+.container {
+    width: 100%;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    z-index: 9999;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    color: $default;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+    transform: translate3d(0px, -210px, 0px);
+    overflow-y: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxSearch {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #E8EAEB;
+}
+
+.searchBar {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.searchIcon {
+    transform: translate(0px, -50%);
+    position: absolute;
+    top: 50%;
+    color: rgb(163, 168, 175);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    left: 16px;
+}
+
+.searchInput {
+    background: transparent;
+    box-sizing: border-box;
+    padding: 10px 12px 10px 40px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 20px;
+    margin: 0px;
+    color: $default;
+}
+
+.btnCreate {
+    color: $violet;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    padding: 0 16px;
+    font-size: $font-size-base;
+    align-items: center;
+    font-weight: $font-weight-semibold;
+    border-bottom: 1px solid #E8EAEB;
+    background-color: #fff;
+    width: 100%;
+
+    &:hover {
+        background-color: #efe9ff;
+    }
+}
+
+.btnIcon {
+    color: $violet;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    margin-right: 6px;
+    width: 17.5px;
+    height: 17.5px;
+    border-radius: 50%;
+    font-size: 12px;
+    border: 2px solid $violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLabel {
+    font-size: $font-size-base;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: $font-weight-semibold;
+    line-height: 20px;
+    color: $violet;
+    margin: 0;
+}
+
+.selectList {
+    height: auto;
+    width: 100%;
+    word-break: break-word;
+    overflow: auto;
+    height: 200px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Phần của thanh cuộn */
+    &::-webkit-scrollbar-thumb {
+        background-color: #A0A5AC; /* Màu xám của thanh cuộn */
+        border-radius: 10px; /* Bo tròn góc */
+    }
+
+    /* Nền của thanh cuộn */
+    &::-webkit-scrollbar-track {
+        background-color: transparent; /* Nền trong suốt hoặc có thể đổi màu theo ý bạn */
+    }
+}
+
+.selectItem {
+    cursor: pointer;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    min-height: 40px;
+    border-bottom: 1px solid #E8EAEB;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &:hover {
+        background-color: #efe9ff;
+    }
+}
+
+.selectContent {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.itemName {
+    font-size: $font-size-base;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: $font-weight-base;
+    line-height: 20px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+
+    &:hover {
+        color: $violet;
+    }
+}
+
+.emptyList {
+    display: flex;
+    font-size: 14px;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.supplierPhone {
+    font-size: $font-size-base;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: $font-weight-semibold;
+    line-height: 20px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+.supplierAvatar {
+    height: 27px;
+    width: 27px;
+    margin-right: 15px;
+    color: #6d71ed;
+}
+
+.largePopup {
+    .btnCreate {
+        padding: 0 28px;
+        box-shadow: none;
+        min-height: 50px;
+        align-items: center;
+        border-radius: 3px;
+        text-transform: none;
+        justify-content: flex-start;
+        position: relative;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: var(--bs-font-sans-serif);
+        border: 0;
+        margin: 0;
+        cursor: pointer;
+        user-select: none;
+        vertical-align: middle;
+        text-decoration: none;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+            left: 24px;
+            right: 24px;
+            bottom: 0;
+            height: 1px;
+            content: '';
+            position: absolute;
+            background-color: #E8EAEB;
+        }
+    }
+
+    .btnIcon {
+        width: 20px;
+        height: 20px;
+        margin-left: -2px;
+        margin-right: 14px;
+        font-size: 14px;
+    }
+
+    .selectList {
+        max-height: 440px;
+    }
+
+    .selectItem {
+        border: 0;
+        margin: 0;
+        display: flex;
+        padding: 10px 24px 10px;
+        position: relative;
+        border-radius: 0;
+        color: $default;
+        overflow: hidden;
+        text-align: left;
+        align-items: center;
+        min-height: 52px;
+
+        &::after {
+            left: 24px;
+            right: 24px;
+            bottom: 0;
+            height: 1px;
+            content: '';
+            position: absolute;
+            background-color: #E8EAEB;
+        }
+    }
+
+    .productImg {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        object-fit: contain;
+        align-items: center;
+        flex-shrink: 0;
+        margin-right: 16px;
+        border-radius: 8px;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .defaultImg {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        object-fit: contain;
+        align-items: center;
+        flex-shrink: 0;
+        margin-right: 16px;
+        border-radius: 8px;
+        justify-content: center;
+        background-color: #F3F4F5;
+
+        > svg {
+            color: rgb(206, 210, 215);
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    .productInfo {
+        font-size: 0.9rem;
+        font-family: var(--bs-font-sans-serif);
+        font-weight: 400;
+        line-height: 16px;
+        margin: 0;
+    }
+
+    .productId {
+        color: rgb(163, 168, 175);
+    }
+
+    .productType {
+        color: rgb(0, 136, 255);
+    }
+
+    .productData {
+        min-width: 330px;
+        text-align: right;
+
+        > p {
+            font-size: $font-size-base;
+            font-family: var(--bs-font-sans-serif);
+            font-weight: $font-weight-base;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+
+    .dataName {
+        color: rgb(163, 168, 175);
+    }
+
+    .quantity .dataValue {
+        color: $violet;
+
+        &.danger {
+            color: $red;
+        }
+    }
+
+    .emptyList {
+        min-height: 52px;
+    }
+}

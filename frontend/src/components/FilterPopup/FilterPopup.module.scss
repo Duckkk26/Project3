@@ -1,0 +1,197 @@
+@import '../../styles/helpers';
+
+.popup {
+    position: fixed;
+    z-index: 1300;
+    inset: 0px;
+}
+
+.container {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 50px;
+    opacity: 1;
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0px;
+    position: relative;
+    z-index: 100001;
+}
+
+.wrapper {
+    width: 50rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 0.571429rem 1.14286rem;
+    border-radius: 3px;
+}
+
+.header {
+    position: relative;
+    padding: 0px 24px;
+    display: flex;
+    box-sizing: border-box;
+    height: 52px;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(211, 213, 215);
+    font-family: $font-family-base;
+    font-weight: $font-weight-semibold;
+    font-size: 20px;
+    line-height: 2rem;
+    margin: 0px;
+    justify-content: space-between;
+
+    .box-header {
+        background: rgb(255, 255, 255);
+        display: flex;
+
+        > p {
+            box-sizing: border-box;
+            font-family: $font-family-base;
+            font-weight: $font-weight-semibold;
+            font-size: 20px;
+            line-height: 2rem;
+            margin: 0px 0px 4px;
+            color: $default;
+            text-align: inherit;
+        }
+    }
+}
+
+.content {
+    background: #fff;
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 8px 16px !important;
+    border-radius: 3px;
+    width: 850px;
+}
+
+.filter {
+    &-container {
+        margin: 0px;
+        box-sizing: border-box;
+        max-height: calc(-200px + 100vh);
+        overflow: auto;
+        padding: 0px;
+    }
+
+    &-wrapper {
+        padding: 24px;
+        overflow: hidden;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    &-content {
+        overflow: auto;
+        max-height: calc(-412px + 100vh);
+        min-height: 200px;
+        border-top: 1px solid rgb(243, 244, 245);
+    
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        /* Phần của thanh cuộn */
+        &::-webkit-scrollbar-thumb {
+            background-color: #A0A5AC; /* Màu xám của thanh cuộn */
+            border-radius: 10px; /* Bo tròn góc */
+        }
+
+        /* Nền của thanh cuộn */
+        &::-webkit-scrollbar-track {
+            background-color: transparent; /* Nền trong suốt hoặc có thể đổi màu theo ý bạn */
+        }
+    }
+
+    &-list {
+        background: rgb(255, 255, 255);
+        min-width: 220px;
+        padding: 0px;
+    }
+
+    &-item {
+        display: flex;
+        padding: 4px 10px;
+        margin: 6px 14px;
+        border-radius: 6px;
+    }
+
+    &-value {
+        box-sizing: border-box;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin: 0px;
+        color: $default;
+        text-align: inherit;
+        padding-left: 6px;
+        padding-top: 2px;
+    }
+}
+
+.box-filter {
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: calc(50% - 12px);
+    border: 1px solid rgb(211, 213, 215);
+    border-radius: 6px;
+
+    .title {
+        box-sizing: border-box;
+        font-family: $font-family-base;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0px;
+        color: rgb(0, 0, 0);
+        text-align: inherit;
+        font-weight: $font-weight-semibold;
+        padding: 16px;
+    }
+}
+
+.checkbox {
+    height: 24px !important;
+    width: 24px !important;
+}
+
+.col {
+    &-item {
+        padding: 8px 16px;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        user-select: none;
+        background: white;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgb(243, 244, 245);
+        }
+    }
+
+    &-title {
+        box-sizing: border-box;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin: 0px;
+        color: $default;
+        text-align: inherit;
+    }
+}
+
+.group-btns {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 8px 24px 16px;
+    gap: 16px;
+}

@@ -1,0 +1,68 @@
+@import '../../styles/helpers';
+
+.box-statistics {
+    height: 60px;
+    display: flex;
+    font-size: 14px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.box-content {
+    width: 150px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 48px;
+
+    .title {
+        text-align: center;
+
+        > p {
+            font-size: $font-size-base;
+            font-family: var(--bs-font-sans-serif);
+            font-weight: $font-weight-semibold;
+            line-height: 20px;
+        }
+    }
+
+    .value {
+        margin-top: 4px;
+        text-align: center;
+
+        > p {
+            font-size: $font-size-base;
+            font-family: var(--bs-font-sans-serif);
+            font-weight: $font-weight-semibold;
+            line-height: 20px;
+        }
+    }
+}
+
+.box-function {
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 48px;
+    text-align: center;
+
+    > p {
+        margin-top: 10px;
+        color: rgb(163, 168, 175);
+        font-size: 30px;
+        font-weight: 500;
+        font-family: var(--bs-font-sans-serif);
+        line-height: 20px;
+    }
+}
+
+.receipt {
+    color: rgb(13, 180, 115);
+}
+
+.payment {
+    color: rgb(238, 71, 71);
+}
+
+.result {
+    color: rgb(0, 136, 255);
+}

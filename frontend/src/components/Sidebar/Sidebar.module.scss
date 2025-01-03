@@ -1,0 +1,115 @@
+@import "../../styles/helpers";
+
+.container {
+    top: 0;
+    left: 0;
+    width: $sidebar-width-open;
+    bottom: 0;
+    display: block;
+    z-index: 1002;
+    position: fixed;
+    background: $sidebar-color;
+    box-shadow: 2px 0 4px rgba($color: #a8a8a8, $alpha: 0.25);
+    transition: width 200ms;
+
+    > nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+
+        .header {
+            height: 55px;
+        }
+        
+        .logo {
+            height: 55px;
+
+            img {
+                padding: 12px 12px 0;
+            }
+        }
+
+        .menuDivider {
+            border: 0;
+            margin: 0;
+            border-bottom: 1px solid $gray-600;
+        }
+    }
+
+    @media print {
+        display: none;
+    }
+    
+    :global(.sidebar-hide) & {
+        display: none;
+    }
+    
+    @media (max-width: breakpoint-max(sm)) {
+        position: static !important;
+        width: auto;
+        margin: 12px 24px 0;
+        border-radius: 8px;
+        padding: 0;
+        height: 0;
+        transform: none;
+    
+        .logo,
+        .sidebarAlerts,
+        .sidebarLabels,
+        .menuListTitle {
+            display: none;
+        }
+    }
+}
+
+.menuListContainer {
+    height: calc(100% - 60px);
+    position: relative;
+    margin-top: 24px;
+    
+    .menuListWrapper {
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        overscroll-behavior: contain;
+        height: 100%;
+        scrollbar-width: none;
+
+        .menuList {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            list-style: none;
+
+            .menuListTitle {
+                display: flex;
+                position: relative;
+                box-sizing: border-box;
+                text-align: left;
+                align-items: center;
+                justify-content: flex-start;
+                width: auto;
+                cursor: pointer;
+                margin: 4px;
+                padding: 0 10px;
+                min-height: 30px;
+                text-transform: uppercase;
+                color: unset;
+
+                > p {
+                    font-size: $font-size-base;
+                    font-family: var(--bs-font-sans-serif);
+                    font-weight: $font-weight-bold;
+                    line-height: 20px;
+                    margin: 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    color: $gray-800;
+                }
+            }
+        }
+    }
+}

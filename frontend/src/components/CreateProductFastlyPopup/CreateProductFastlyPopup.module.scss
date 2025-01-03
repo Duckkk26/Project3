@@ -1,0 +1,216 @@
+@import "../../styles/variables";
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    //position: absolute;
+    background-clip: padding-box;
+    border: 1px solid rgb(211, 213, 215);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    outline: none;
+    transform: translate3d(200px, 100px, 0px);
+    max-height: 480px;
+    width: 700px;
+    z-index: 100000;
+    position: fixed;
+    .modal-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E8EAEB;
+        padding: 16px 24px;
+
+        .modal-box-header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-weight: $font-weight-semibold;
+
+            h5 {
+                font-size: 1.125rem;
+                font-family: var(--bs-font-sans-serif);
+                line-height: 20px;
+                margin: 0;
+            }
+        }
+
+    }
+
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 24px;
+        gap: 20px;
+
+        .row-name{
+            display: flex;
+            flex-direction: column;
+            border: 0;
+            margin: 0;
+            display: inline-flex;
+            padding: 0;
+            position: relative;
+            min-width: 0;
+            vertical-align: top;
+            padding-top: 10px;
+            gap: 10px;
+
+            .form-label {
+                color: #46515F;
+                padding: 0;
+                font-size: $font-size-base;
+                font-family: var(--bs-font-sans-serif);
+                font-weight: $font-weight-base;
+                line-height: 17px;
+                top: 0;
+                left: 0;
+                transform-origin: top left;
+                transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                display: flex;
+                align-items: center;
+                transform: none;
+            }
+            .form-textfield {
+                border: 0;
+                margin: 0;
+                display: inline-flex;
+                padding: 0;
+                position: relative;
+                min-width: 0;
+                flex-direction: column;
+                vertical-align: top;
+                border-radius: 4px;
+                cursor: text;
+                font-size: $font-size-base;
+                font-weight: $font-weight-base;
+                font-family: var(--bs-font-sans-serif);                    
+                line-height: 16px;
+                box-sizing: border-box;
+
+                input {
+                    font: inherit;
+                    color: #0F1824;
+                    height: 40px;
+                    padding: 0 12px;
+                    box-shadow: none;
+                    margin: 0;
+                    border: 0;
+                    height: 36.6px;
+                    min-width: 0;
+                    background: none;
+                    box-sizing: content-box;
+                }
+            }
+        }
+
+        .row-content{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 310px;
+
+                .form-label {
+                    color: #46515F;
+                    padding: 0;
+                    font-size: $font-size-base;
+                    font-family: var(--bs-font-sans-serif);
+                    font-weight: $font-weight-base;
+                    line-height: 17px;
+                    top: 0;
+                    left: 0;
+                    transform-origin: top left;
+                    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                    display: flex;
+                    align-items: center;
+                    transform: none;
+                }
+
+                .box-select{
+                    color: #46515F;
+                    padding: 0;
+                    font-size: $font-size-base;
+                    font-family: var(--bs-font-sans-serif);
+                    font-weight: $font-weight-base;
+                    line-height: 17px;
+                    top: 0;
+                    left: 0;
+                    transform-origin: top left;
+                    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                    display: flex;
+                    transform: none;
+                    justify-items: start;
+                    width: 310px;
+                    position: relative;
+                    
+
+                    button{
+                        font: inherit;
+                        color: #0F1824;
+                        height: 35px;
+                        padding: 0 12px;
+                        box-shadow: none;
+                        margin: 0;
+                        border: 1px solid rgb(211, 213, 215);
+                        width: 100%;
+                        background: none;
+                        display: flex;
+                        justify-content: space-between; /* Ensures space between text and icon */
+                        align-items: center;
+                        text-align: left; /* Aligns the text to the start of the button */
+                        border-radius: 3px;
+                        position: relative;
+                        
+                    }
+                }
+                .form-textfield {
+                    border: 0;
+                    margin: 0;
+                    display: inline-flex;
+                    padding: 0;
+                    position: relative;
+                    min-width: 0;
+                    flex-direction: column;
+                    vertical-align: top;
+                    border-radius: 4px;
+                    cursor: text;
+                    font-size: $font-size-base;
+                    font-weight: $font-weight-base;
+                    font-family: var(--bs-font-sans-serif);                    
+                    line-height: 16px;
+                    box-sizing: border-box;
+    
+                    input {
+                        font: inherit;
+                        color: #0F1824;
+                        height: 40px;
+                        padding: 0 12px;
+                        box-shadow: none;
+                        margin: 0;
+                        border: 0;
+                        height: 35px;
+                        min-width: 0;
+                        background: none;
+                        box-sizing: content-box;
+                    }
+                }
+            }
+        }
+    }
+    .modal-footer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: end;
+        border-top: none;
+        padding: 16px 24px;
+    }
+}

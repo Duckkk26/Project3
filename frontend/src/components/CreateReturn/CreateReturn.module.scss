@@ -1,0 +1,39 @@
+@import '../../styles/helpers';
+
+.container {
+    grid-template-areas: 
+        "title title"
+        "maininfo subinfo" !important;
+}
+
+.total {
+    color: $violet !important;
+}
+
+.group-form-items {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.supplier-info {
+    color: $violet;
+    text-decoration: none;
+    background-color: transparent;
+
+    > h4 {
+        color: $violet;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}

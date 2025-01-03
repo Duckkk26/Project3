@@ -1,0 +1,584 @@
+@import '../../styles/helpers';
+
+.container {
+    overflow: auto;
+    max-height: 550px;
+    width: 100%;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.btnIcon {
+    color: $default;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow: visible;
+    font-size: $font-size-base;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+    
+    .btnIconLabel {
+        width: 100%;
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+}
+
+.boxInput {
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    display: inline-flex;
+    position: relative;
+    font-size: $font-size-base;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+
+    .inputField {
+        font: inherit;
+        color: currentColor;
+        width: 100%;
+        border: 0;
+        height: 1.1876em;
+        margin: 0;
+        display: block;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    &::before {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "\00a0";
+        position: absolute;
+        transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+        pointer-events: none;
+    }
+
+    &::after {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        border-bottom: 2px solid $violet;
+        pointer-events: none;
+    }
+
+    &:hover {
+        &::before {
+            border-bottom: 2px solid #7A8086;
+        }
+    }
+
+    &:focus-within {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.table {
+    display: table;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    
+    &Header {
+        display: table-header-group;
+        background-color: #F3F4F5;
+    }
+    
+    &Body {
+        display: table-row-group;
+        
+        .tableRow:hover {
+            background-color: #f6f3ff;
+        }
+    }
+    
+    &Row {
+        color: inherit;
+        display: table-row;
+        outline: 0;
+        vertical-align: middle;
+        border-bottom: 1px solid rgb(224, 224, 224);
+    }
+    
+    &Cell {
+        display: table-cell;
+        padding: 16px;
+        font-size: 0.875rem;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        vertical-align: inherit;
+        position: relative;
+        
+        &Header {
+            color: rgba(0, 0, 0, 0.87);
+            font-weight: 500;
+            line-height: 1.5rem;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            position: sticky;
+            background-color: #fafafa;
+            
+            > p {
+                box-sizing: border-box;
+                font-family: $font-family-base;
+                font-weight: $font-weight-semibold;
+                font-size: $font-size-base;
+                line-height: 20px;
+                margin: 0px;
+                color: $default;
+                text-align: inherit;
+            }
+        }
+        
+        &Body {
+            color: rgba(0, 0, 0, 0.87);
+            
+            > p {
+                box-sizing: border-box;
+                font-family: $font-family-base;
+                font-weight: $font-weight-base;
+                font-size: $font-size-base;
+                line-height: 20px;
+                margin: 0px;
+                color: $default;
+                text-align: inherit;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+            > img {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                min-width: 40px;
+                object-fit: contain;
+                align-items: center;
+                border-radius: 8px;
+                justify-content: center;
+                background-color: transparent;
+            }
+            
+            .boxInfo {
+                background-image: initial;
+                background-position: initial;
+                background-size: initial;
+                background-repeat: initial;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                min-height: 50px;
+                background-color: unset;
+                
+                .boxName {
+                    background-image: initial;
+                    background-position: initial;
+                    background-size: initial;
+                    background-repeat: initial;
+                    background-attachment: initial;
+                    background-origin: initial;
+                    background-clip: initial;
+                    background-color: unset;
+                    width: fit-content;
+                    position: relative;
+                    
+                    > p {
+                        box-sizing: border-box;
+                        font-family: $font-family-base;
+                        font-weight: $font-weight-base;
+                        font-size: $font-size-base;
+                        line-height: 20px;
+                        margin: 0px;
+                        color: $default;
+                        text-align: inherit;
+                        max-width: 330px;
+                    }
+                    
+                    .btnIcon {
+                        top: 3px;
+                        right: -20px;
+                        height: fit-content;
+                        position: absolute;                        
+                        
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                            cursor: pointer;
+                            color: $violet;
+                        }
+                    }
+                }
+                
+                .boxId {
+                    background-image: initial;
+                    background-position: initial;
+                    background-size: initial;
+                    background-repeat: initial;
+                    background-attachment: initial;
+                    background-origin: initial;
+                    background-clip: initial;
+                    width: 100%;
+                    display: flex;
+                    background-color: unset;
+                    
+                    > a {
+                        text-decoration: none;
+                        font-family: $font-family-base;
+                        font-weight: $font-weight-base;
+                        font-size: $font-size-base;
+                        line-height: 20px;
+                        margin: 0px;
+                        cursor: pointer;
+                        color: $violet;
+                        
+                        > p {
+                            box-sizing: border-box;
+                            font-family: $font-family-base;
+                            font-weight: $font-weight-base;
+                            font-size: $font-size-base;
+                            line-height: 20px;
+                            margin: 0.571429rem 0px 0px;
+                            color: $violet;
+                            text-align: inherit;
+                            max-width: 122px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .boxQuantity {
+                display: flex;
+                text-align: center;
+                align-items: flex-end;
+                justify-content: center;
+
+                .btnIcon {
+                    width: 24px;
+                    cursor: pointer;
+                    height: 24px;
+                    padding: 0;
+                    margin-bottom: 2px;
+
+                    svg {
+                        color: #A3A8AF;
+                        font-size: 16px;
+                        fill: currentColor;
+                        display: inline-block;
+                        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                        flex-shrink: 0;
+                        user-select: none;
+                    }
+                }
+
+                .boxFormControl {
+                    border: 0;
+                    margin: 0;
+                    display: inline-flex;
+                    padding: 0;
+                    position: relative;
+                    min-width: 0;
+                    flex-direction: column;
+                    vertical-align: top;
+
+                    .boxInput {
+                        width: 60px !important;
+                    }
+                }
+            }
+
+            .boxPrice {
+                .boxInput {
+                    width: 100%;
+                    height: 30px;
+                }
+            }
+
+            .btnDiscount {
+                display: flex;
+                font-size: $font-size-base;
+                box-shadow: none;
+                align-items: center;
+                border-radius: 3px;
+                text-transform: none;
+                width: 100%;
+                height: 29px;
+                margin: 15px auto 15px 0;
+                padding: 0;
+                position: relative;
+                min-height: 0;
+                text-align: right;
+                transition: 0ms;
+                font-weight: $font-weight-base;
+                border-bottom: 1px solid #D3D5D7;
+                justify-content: flex-end;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                &:hover {
+                    border-bottom: 2px solid #7A8086;
+                    background-color: unset;
+                    box-shadow: none;
+
+                    .discountRate {
+                        bottom: -22px !important;
+                    }
+                }
+
+                .btnLabel {
+                    width: 100%;
+                    display: inherit;
+                    font-size: 1rem;
+                    align-items: inherit;
+                    text-transform: none;
+                    justify-content: inherit;
+                    margin-top: 1px;
+
+                    .discountValue {
+                        box-sizing: border-box;
+                        font-family: $font-family-base;
+                        font-weight: $font-weight-base;
+                        font-size: $font-size-base;
+                        line-height: 20px;
+                        margin: 0px;
+                        color: $default;
+                        text-align: inherit;
+                    }
+
+                    .discountRate {
+                        font-size: $font-size-base;
+                        font-family: var(--bs-font-sans-serif);
+                        font-weight: $font-weight-base;
+                        line-height: 20px;
+                        margin: 0;
+                        bottom: -21px;
+                        position: absolute;
+                        color: #FF4D4D;
+                    }
+                }
+            }
+
+            .boxNote {
+                width: 100%;
+                padding: 8px;
+                height: 36px;
+                border: 1px solid rgba(0, 0, 0, 0.42);
+                border-radius: 4px;
+                font-size: $font-size-base;
+                font-family: $font-family-base;
+                color: $default;
+                background-color: #fff;
+                box-sizing: border-box;
+                
+                &:hover {
+                  border-color: $violet;
+                }
+              
+                &:focus {
+                  outline: none;
+                  border-color: $violet;
+                  box-shadow: 0 0 0 1px $violet;
+                }
+            
+              }
+
+              .boxReason {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0px 8px;
+                height: 36px;
+                border: 1px solid rgba(0, 0, 0, 0.42);
+                border-radius: 4px;
+                font-size: $font-size-base;
+                font-family: $font-family-base;
+                color: $default;
+                position: relative;
+                background-color: #fff;
+                box-sizing: border-box;
+               
+              
+                &:hover {
+                  border-color: $violet;
+                }
+              
+                &:focus {
+                  outline: none;
+                  border-color: $violet;
+                  box-shadow: 0 0 0 1px $violet;
+                }
+
+                .btnReason {
+                    font-family: $font-family-base;
+                    font-weight: $font-weight-base;
+                    font-size: $font-size-base;
+                    line-height: 20px;
+                    margin: 0px;
+                    width: 100%;
+                    padding: 0 26px 0 12px;
+                    height: 100%;
+                    border-radius: 3px;
+                    text-align: left;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: $default;
+            
+                    &:hover {
+                        border-color: rgb(122, 128, 134);
+                    }
+            
+                    // span {
+                    //     position: absolute;
+                    //     right: 2px;
+                    //     top: 50%;
+                    //     height: 24px;
+                    //     width: 24px;
+                    //     transform: translate(0px, -50%);
+                    //     color: rgb(163, 168, 175);
+                    // }
+            
+                    &.selected {
+                        border: 1px solid $violet;
+            
+                        span {
+                            color: $violet;
+            
+                            > svg {
+                                transform: rotate(180deg) translateY(-20%);
+                            }
+                        }
+                    }
+                }
+             
+              }
+              
+              
+
+            .boxTax {
+                display: inline-flex;
+                position: relative;
+                flex: 0 0 auto;
+                flex-direction: column;
+                width: 85px;
+                height: 30px;
+
+                .btnTax {
+                    font-family: $font-family-base;
+                    font-weight: $font-weight-base;
+                    font-size: $font-size-base;
+                    line-height: 20px;
+                    margin: 0px;
+                    display: flex;
+                    padding: 8px 24px 8px 0px;
+                    height: 30px;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    border-image: initial;
+                    border-bottom: 1px solid rgb(211, 213, 215);
+                    text-align: left;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    background: transparent;
+                    color: rgb(15, 24, 36);
+                    align-items: center;
+                    background-color: unset;
+
+                    &:hover {
+                        border-color: rgb(122, 128, 134);
+                    }
+
+                    > p {
+                        box-sizing: border-box;
+                        font-family: $font-family-base;
+                        font-weight: $font-weight-base;
+                        font-size: $font-size-base;
+                        line-height: 20px;
+                        margin: 0px;
+                        color: $default;
+                        text-align: inherit;
+                        width: 40px;
+                    }
+
+                    > svg {
+                        position: absolute;
+                        right: 0px;
+                        top: 50%;
+                        transform: translate(-8px, -50%);
+                        color: rgb(163, 168, 175);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.boxEmpty {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    > p {
+        box-sizing: border-box;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin: 4px 0 16px;
+        color: rgb(163, 168, 175);
+        text-align: inherit;
+    }
+}
+
+
+    

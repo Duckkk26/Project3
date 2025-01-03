@@ -1,0 +1,12 @@
+
+h	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(ÄÇùÿÿÿÿ8¸µåíŸ2
+M
+java:S2160"+Override the "equals" method in this class.(´¾•Ûÿÿÿÿÿ8ºµåíŸ2
+Z
+java:S1874 "8Remove this use of "GenericGenerator"; it is deprecated.(…¯·õûÿÿÿÿ8ÀµåíŸ2
+M
+java:S1874""0Remove this use of "strategy"; it is deprecated.(Â¡Ñ™8ÀµåíŸ2
+t
+java:S3776{"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ãöãºıÿÿÿÿ8ÂµåíŸ2
+ç
+java:S6541{"ÄA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 18 to 14, Nesting Level from 4 to 2, Number of Variables from 9 to 6.(ãöãºıÿÿÿÿ8ÇµåíŸ2

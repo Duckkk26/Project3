@@ -1,0 +1,14 @@
+
+e
+java:S5411Å"(Use a primitive boolean expression here.(¼÷á°J$d840da56-d526-4e04-92ac-4c672fed8ead
+‚	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(×¿„¤J$c5997853-3f64-4dbf-a077-0900eceb638a
+Š
+java:S1192"MDefine a constant instead of duplicating this literal "Nháº­p hÃ ng" 4 times.(œÆöJ$c28da67d-1c12-4276-b903-657563b736d0
+¾
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æ±‰ÃJ$2eed368a-4541-4142-a0b8-e1b36e78883c
+ˆ
+java:S1612§"LReplace this lambda with method reference 'grnProductMapper::mapToResponse'.(¦ÄÕ8J$bef04c97-d00b-4678-9acd-3ffb590deee2
+g
+java:S2201ë"*The return value of "toList" must be used.(ùøïùJ$4e658a1a-6fcd-43b4-a43c-5d1c8fd6e9d7
+o
+java:S1172‡"2Remove this unused method parameter "existingGRN".(Æ±‰ÃJ$1cd3665f-fb39-47dd-a8f2-227fc4eb0a9c

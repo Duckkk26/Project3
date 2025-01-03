@@ -1,0 +1,186 @@
+@import "../../styles/helpers";
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: calc(100% + 8px);
+    margin: -4px;
+
+    .boxInfo {
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
+        margin: 0;
+        padding: 4px;
+        box-sizing: border-box;
+
+        .boxName {
+            display: flex;
+            background-color: #fff;
+
+            .supplierName {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                background-color: #fff;
+    
+                > p {
+                    box-sizing: border-box;
+                    font-family: $font-family-base;
+                    font-weight: $font-weight-base;
+                    font-size: $font-size-base;
+                    line-height: 20px;
+                    margin: 0px;
+                    color: $default;
+                    text-align: inherit;
+    
+                    > a {
+                        overflow: hidden;
+                        font-size: 1.125rem;
+                        max-width: 185px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-overflow: ellipsis;
+                        text-decoration: none;
+                        color: $violet;
+                        margin: 0;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .cancelIcon {
+                background: rgb(255, 255, 255);
+                width: 50px;
+                margin-left: 4px;
+        
+                .btnCancel {
+                    color: $default;
+                    border: 0;
+                    cursor: pointer;
+                    margin: 0;
+                    display: inline-flex;
+                    outline: 0;
+                    padding: 5px;
+                    position: relative;
+                    align-items: center;
+                    user-select: none;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    -moz-appearance: none;
+                    justify-content: center;
+                    text-decoration: none;
+                    background-color: transparent;
+                    -webkit-appearance: none;
+                    -webkit-tap-highlight-color: transparent;
+                    overflow: visible;
+                    font-size: $font-size-base;
+                    text-align: center;
+                    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.04);
+                    }
+
+                    .btnLabel {
+                        width: 100%;
+                        display: flex;
+                        align-items: inherit;
+                        justify-content: inherit;
+                        width: 16px;
+                        height: 16px;
+
+                        > svg {
+                            color: rgb(163, 168, 175);
+                        }
+                    }
+                }
+            }
+        }
+
+        .boxPhone {
+            background: rgb(255, 255, 255);
+            padding-top: 8px;
+            display: flex;
+
+            > p {
+                box-sizing: border-box;
+                font-family: $font-family-base;
+                font-weight: $font-weight-semibold;
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0px;
+                color: $default;
+                text-align: inherit;
+            }
+        }
+
+        .boxAddress {
+            padding-top: 10px;
+            background-color: #fff;
+
+            > p {
+                box-sizing: border-box;
+                font-family: $font-family-base;
+                font-weight: $font-weight-base;
+                font-size: $font-size-base;
+                line-height: 20px;
+                margin: 0px;
+                color: $default;
+                text-align: inherit;
+
+                .addressTitle {
+                    font-weight: $font-weight-semibold;
+                }
+            }
+        }
+
+        .boxReport {
+            border: 1px dashed #A3A8AF;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #fff;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .reportItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .reportTitle {
+                    box-sizing: border-box;
+                    font-family: $font-family-base;
+                    font-weight: $font-weight-base;
+                    font-size: $font-size-base;
+                    line-height: 20px;
+                    margin: 0px;
+                    color: $default;
+                    text-align: inherit;
+                }
+
+                .reportValue {
+                    box-sizing: border-box;
+                    font-family: $font-family-base;
+                    font-weight: $font-weight-semibold;
+                    font-size: $font-size-base;
+                    line-height: 20px;
+                    margin: 0px;
+                    color: $violet;
+                    text-align: inherit;
+
+                    &.danger {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

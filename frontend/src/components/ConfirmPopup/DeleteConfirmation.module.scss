@@ -1,0 +1,125 @@
+@import '../../styles/variables.scss';
+
+.container {
+    width: 600px;
+    background: #fff;
+    box-shadow: rgba(168, 168, 168, 0.25) 0 0.571429rem 1.14286rem;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10001;
+    left: 35%;
+    top: 20%;
+
+    .header {
+        position: relative;
+        padding: 0 1.71429rem;
+        display: flex;
+        height: 3.42857rem;
+        align-items: flex-end;
+        font-family: $font-family-base;
+        font-weight: 500;
+        font-size: 1.42857rem;
+        line-height: 2rem;
+        margin: 0;
+
+        .titleHeader {
+            font-family: $font-family-base;
+            font-weight: 500;
+            font-size: 1.42857rem;
+            line-height: 2rem;
+            margin: 0;
+            color: rgb(15, 24, 36);
+        }
+
+        .btnCancel {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            overflow: hidden;
+            height: 1.71429rem;
+            width: 1.71429rem;
+            background: transparent;
+            position: absolute;
+            padding: 0;
+            top: 1.71429rem;
+            right: 1.71429rem;
+            color: rgb(163, 168, 175);
+        }
+    }
+
+    .body {
+        font-family: $font-family-base;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.42857rem;
+        margin: 0;
+        padding: 1.14286rem 1.71429rem;
+        max-height: calc(100vh - 14.2857rem);
+        overflow: auto;
+
+        .description {
+            font-family: $font-family-base;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.42857rem;
+            margin: 0;
+            color: rgb(15, 24, 36);
+        }
+    }
+
+    .footer {
+        padding: 0.571429rem 1.71429rem 1.71429rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .btnCancel,
+        .btnConfirm {
+            margin-left: 1.14286rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: $font-family-base;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.42857rem;
+            height: 2.57143rem;
+            padding: 0 1.14286rem;
+            min-width: 4.57143rem;
+            overflow: hidden;
+            position: relative;
+
+            >span {
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                padding: 0px;
+                z-index: 2;
+                font-size: inherit;
+                font-weight: inherit;
+            }
+        }
+
+        .btnCancel {
+
+            border: 1px solid rgb(255, 77, 77);
+            background: #fff;
+            color: rgb(255, 77, 77);
+        }
+
+        .btnConfirm {
+
+            border: none;
+            background: rgb(255, 77, 77);
+            color: #fff;
+        }
+    }
+}

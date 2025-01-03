@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: inventory-receipt
+  cloud:
+    config:
+      profile: dev
+  config:
+    import: "optional:configserver:http://localhost:8088"
+  datasource:
+    url: jdbc:mysql://localhost:3306/${database.name}?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=${time.zone}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${database.username}
+    password: ${database.password}
+    hikari:
+      maximum-pool-size: 20
+      connection-timeout: 30000
+      idle-timeout: 10000
+      minimum-idle: 10
+
+  mail:
+    from: vanhoa30903@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    username: vanhoa30903@gmail.com
+    password: wpkj notz cnrk cnhy
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+    default-locale: en
+
+endpoint:
+  confirmUser: http://localhost:8080/api/v1/users/confirm-email

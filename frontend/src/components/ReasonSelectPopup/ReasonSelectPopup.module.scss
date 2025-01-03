@@ -1,0 +1,55 @@
+@import '../../styles/helpers';
+
+.container {
+    z-index: 1000;
+    width: 100px;
+    border: 1px solid rgb(211, 213, 215);
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 0.571429rem 1.14286rem;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    position: absolute;
+    top : 210%;
+    transform: translate3d(0px, -35px, 0px);
+}
+
+.wrapper {
+    max-height: 160px;
+    width: 100%;
+    overflow: hidden auto;
+    border-radius: 3px;
+    padding: 0px 4px;
+    box-sizing: border-box;
+}
+
+.selectItem {
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 20px;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 0px 8px;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 4px 0px;
+    background: transparent;
+
+    &.selected {
+        color: $violet;
+        background: #f6f3ff;      
+    }
+    
+    &:hover {
+        background: rgb(243, 244, 245);
+        border-color: $violet;
+        color: $violet;
+    }
+}

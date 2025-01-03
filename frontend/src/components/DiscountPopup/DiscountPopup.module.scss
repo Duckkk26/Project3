@@ -1,0 +1,129 @@
+@import '../../styles/helpers';
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    gap: 12px;
+}
+
+.toggleBtnGroup {
+    display: inline-flex;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 80px;
+    height: 24px;
+
+    .toggleBtn {
+        color: rgba(0, 0, 0, 0.38);
+        border: 1px solid $violet;
+        cursor: pointer;
+        margin: 0;
+        display: inline-flex;
+        outline: 0;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        user-select: none;
+        border-radius: 3px;
+        vertical-align: middle;
+        -moz-appearance: none;
+        justify-content: center;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+        height: 100%;
+        min-width: 40px;
+        font-family: var(--bs-font-sans-serif);
+        font-weight: $font-weight-semibold;
+        line-height: 21px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        &:not(:first-child) {
+            border-left: 1px solid transparent;
+            margin-left: -1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .toggleBtnLabel {
+            width: 100%;
+            display: inherit;
+            align-items: inherit;
+            justify-content: inherit;
+            color: #0F1824;
+            font-size: 12px;
+            text-transform: initial;
+        }
+        
+        &.selected {
+            background-color: $violet;
+
+            .toggleBtnLabel {
+                color: #fff;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+.boxValue {
+    position: relative;
+    display: flex;
+    width: 92px;
+    height: 24px;
+
+    .inputField {
+        background: transparent;
+        box-sizing: border-box;
+        width: 100%;
+        height: 20px;
+        border: none;
+        text-align: right;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: $font-size-base;
+        line-height: 20px;
+        margin: 0px;
+        color: $default;
+
+        & + fieldset {
+            pointer-events: none;
+            position: absolute;
+            inset: 0px;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 1px solid rgb(211, 213, 215);
+            border-image: initial;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+}
+
+.error {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: $font-weight-base;
+    line-height: 20px;
+    color: $red;
+    margin-bottom: 8px;
+    font-size: 12px;
+}

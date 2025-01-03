@@ -1,0 +1,8 @@
+
+¥
+java:S1488"dImmediately return this expression instead of assigning it to the temporary variable "filterParams".(¨¯«©úÿÿÿÿJ$ac8838b6-637e-473a-837f-8e60faec0e6f
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Š…èãJ$c791d4c0-c447-4bd9-bd5f-0a1562e796a5
+v
+java:S1118":Add a private constructor to hide the implicit public one.(§Á¡ŒJ$41cdccf9-bcbe-486e-a9db-51213a0030ed
+’
+java:S1128"VRemove this unused import 'com.sapo.mock_project.inventory_receipt.entities.Supplier'.(ºÑ•¿J$f950ce20-cd5c-47f2-a4ed-1c8bd627063e

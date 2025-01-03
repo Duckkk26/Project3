@@ -1,0 +1,131 @@
+@import '../../../styles/helpers';
+
+.container {
+    z-index: 1000;
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid rgb(211, 213, 215);
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 0.571429rem 1.14286rem;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    position: absolute;
+    top : 210%;
+    transform: translate3d(0px, -35px, 0px);
+
+    & .filter {
+        height: 36px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: $violet;
+        color: white;
+        box-sizing: border-box;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 160px;
+    width: 100%;
+    overflow: hidden auto;
+    border-radius: 3px;
+    box-sizing: border-box;
+   
+}
+
+.selectItem {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.42857rem;
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 2.28571rem;
+    cursor: pointer;
+    border: none;
+    padding: 0px 0.571429rem;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0.285714rem 0px;
+
+    &.selected {
+        color: $violet;
+        background: #f6f3ff;      
+    }
+    
+    &:hover {
+        background: rgb(243, 244, 245);
+        border-color: $violet;
+        color: $violet;
+        border-color: $violet;
+    } 
+    & .checkContainer {
+        display: inline-flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: transparent;
+        font-family: $font-family-base;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.42857rem;
+        margin: 0px;
+
+        & .checkBox {
+            width: 1.71429rem;
+            height: 1.71429rem;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: transparent;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+
+            & input {
+                position: absolute;
+                height: 1.71429rem;
+                width: 1.71429rem;
+                opacity: 0;
+                z-index: 4;
+                margin: 0px;
+                padding: 0px;
+                cursor: pointer;
+            }
+    
+            & div {
+                background: none;
+                -webkit-box-align: center;
+                align-items: center;
+                position: relative;
+                border-radius: 2px;
+                width: 1rem;
+                height: 1rem;
+                box-sizing: border-box;
+                border: 2px solid $violet;
+                &.selected {
+                    background: url("../../../assets/checkIcon.svg") center center / 1rem transparent;
+                }
+            }
+        }
+
+        
+    }
+}

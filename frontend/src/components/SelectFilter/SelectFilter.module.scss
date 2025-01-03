@@ -1,0 +1,138 @@
+@import '../../styles/helpers';
+
+.container {
+    z-index: 1000;
+    border: 1px solid rgb(211, 213, 215);
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 0.571429rem 1.14286rem;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    position: absolute;
+    inset: auto auto 0px 0px;
+    transform: translate3d(0px, calc(100% + 5px), 0px);
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 3px;
+    padding: 4px 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.search {
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    border: 1.5px solid #4d53e0;
+    gap: 10px;
+    padding: 4px 4px;
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 0.571429rem 1.14286rem;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wrapper_select{
+    display: flex;
+    flex-direction: column;
+    max-height: 270px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Phần của thanh cuộn */
+    &::-webkit-scrollbar-thumb {
+        background-color: #A0A5AC; /* Màu xám của thanh cuộn */
+        border-radius: 10px; /* Bo tròn góc */
+    }
+
+    /* Nền của thanh cuộn */
+    &::-webkit-scrollbar-track {
+        background-color: transparent; /* Nền trong suốt hoặc có thể đổi màu theo ý bạn */
+    }
+}
+
+
+.select_page{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 20px;
+    border-top: 1.5px solid #aaaeb5;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.select_all{
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 4px 4px;
+    border-radius: 3px;
+    min-height: 35px;
+    align-items: center;
+    padding-left: 10px;
+    
+
+    &:hover{
+        background-color: rgba(77, 83, 224, 0.1);
+    }
+
+
+}
+
+.page{
+    border: 1.5px solid  #aaaeb5;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+
+    &:hover{
+        background-color: rgba(77, 83, 224, 0.1);
+        cursor: pointer;
+    }
+
+    &.noactive {
+        cursor: not-allowed;
+    }
+
+
+}
+
+.btn_select{
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: 10px;
+    background-color: #4d53e0;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+
+    &:hover{
+        background-color: rgba(77, 83, 224, 0.8);
+    }
+}
+

@@ -1,0 +1,196 @@
+@import "../../styles/variables";
+
+.container {
+    position: fixed;
+    top: 10%;
+    left: 35%;
+    z-index: 10001;
+    width: 600px;
+    margin: .5rem;
+
+    .content {
+        position: relative;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        outline: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+
+        .header {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            padding: 1.6rem 2rem;
+            border-bottom: 1px solid #dfe4e8;
+            height: 65px;
+            fill: #637381;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .title {
+                font-size: 20px;
+                font-weight: 400;
+                color: #212b35;
+                line-height: 3rem;
+            }
+        }
+
+        .body {
+            padding: 2rem;
+            max-height: calc(100vh - 150px);
+            overflow-y: auto;
+            position: relative;
+            flex: 1 1 auto;
+
+            .row {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                vertical-align: baseline;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                position: relative;
+
+                gap: 20px;
+
+                .infoGroup {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 auto;
+                    row-gap: 10px;
+
+                    .error {
+                        margin-top: 5px;
+                        color: #FF4D4D;
+                    }
+
+                    .role {
+                        border: 1px solid #c4cdd5;
+                        height: 34px;
+                        display: flex;
+                        align-items: center;
+                        padding: 8px;
+                        margin-top: 8px;
+                        justify-content: space-between;
+                        padding: 10px;
+
+                        &.active {
+                            border-color: $violet;
+                            box-shadow: 0 0 0 1px $violet;
+                        }
+
+                        svg {
+                            fill: #637381;
+                            width: 14px;
+                            height: 14px;
+
+                            &.active {
+                                fill: $violet;
+                                rotate: 180deg;
+
+                                path {
+                                    fill: $violet;
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    input {
+                        display: inline-block;
+                        margin-top: 8px;
+                        vertical-align: baseline;
+                        width: auto;
+                        height: 34px;
+                        padding: 1px;
+                        border-radius: 0;
+                        border-style: inset;
+                        color: #000;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        padding: 4px 2px 4px 6px;
+                        border: 1px solid #c4cdd5;
+                        border-radius: 3px;
+                        font-weight: 400;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        font-size: 13px;
+                        font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+                    }
+
+
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 16px 30px;
+            border-top: 1px solid #e9ecef;
+
+            .clearfix {
+                padding: 8px 0;
+                height: 35px;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+
+                .create,
+                .back {
+                    position: relative;
+                    box-sizing: border-box;
+                    display: inline-block;
+
+                    height: 34px;
+                    /* Đặt chiều cao của button */
+                    padding: 0 1.5rem;
+                    /* Đặt padding ngang */
+                    font-size: 16px;
+                    line-height: normal;
+                    /* Đảm bảo rằng line-height không vượt quá chiều cao button */
+                    border-radius: 3px;
+                    cursor: pointer;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                }
+
+                .create {
+                    color: #fff !important;
+                    border: 1px solid $violet !important;
+                    background: $violet;
+                    box-shadow: inset 0 1px 0 0 #1391ff;
+                    margin-left: 10px;
+                }
+
+                .back {
+                    background: linear-gradient(180deg, #fff, #f9fafb);
+                    border: 1px solid #c4cdd5;
+                    box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+                    color: #212b35;
+                }
+            }
+
+
+
+
+
+        }
+    }
+}
