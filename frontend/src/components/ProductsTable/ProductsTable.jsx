@@ -22,7 +22,7 @@ const ProductsTable = ({ productsList, setProductList, colsToRender, isView, isD
         const newProductsList = [...productsList];
         newProductsList[index][key] = value;
         setProductList(newProductsList);
-    }    
+    }
 
     const currentUrl = window.location.href;
     const isEditUrl = currentUrl.includes("/edit");    
@@ -78,12 +78,14 @@ const ProductsTable = ({ productsList, setProductList, colsToRender, isView, isD
                                 {Object.entries(colsToRender).map(([key, value]) => {                                    
                                     if (value) {
                                         if (key === "image") {
+                                            console.log(product.image);
+                                            
                                             return (
                                                 <td
                                                     key={key}
                                                     className={cn(s.tableCell, s.tableCellBody, col[key].align)}
                                                 >
-                                                    <img src={product.image?.url} alt="" />
+                                                    <img src={product.image.url ?? product.image} alt="" />
                                                 </td>
                                             )
                                         } else if (key === "name") {
