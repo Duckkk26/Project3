@@ -85,7 +85,7 @@ const ProductsTable = ({ productsList, setProductList, colsToRender, isView, isD
                                                     key={key}
                                                     className={cn(s.tableCell, s.tableCellBody, col[key].align)}
                                                 >
-                                                    <img src={product.image.url ?? product.image} alt="" />
+                                                    <img src={product.image?.url ?? product.image} alt="" />
                                                 </td>
                                             )
                                         } else if (key === "name") {
